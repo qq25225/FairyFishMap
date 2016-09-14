@@ -15,6 +15,8 @@
 		A2149A501D88EFD4006CA0B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2149A4E1D88EFD4006CA0B0 /* LaunchScreen.storyboard */; };
 		A2149A5B1D88EFD4006CA0B0 /* FairyFishMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2149A5A1D88EFD4006CA0B0 /* FairyFishMapTests.m */; };
 		A2149A661D88EFD4006CA0B0 /* FairyFishMapUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2149A651D88EFD4006CA0B0 /* FairyFishMapUITests.m */; };
+		A2149A751D88F19F006CA0B0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2149A741D88F19F006CA0B0 /* MapViewController.m */; };
+		A23767E61D892E0600781E03 /* CLLocation+Sino.m in Sources */ = {isa = PBXBuildFile; fileRef = A23767E51D892E0600781E03 /* CLLocation+Sino.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		A2149A611D88EFD4006CA0B0 /* FairyFishMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairyFishMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2149A651D88EFD4006CA0B0 /* FairyFishMapUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FairyFishMapUITests.m; sourceTree = "<group>"; };
 		A2149A671D88EFD4006CA0B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2149A731D88F19F006CA0B0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A2149A741D88F19F006CA0B0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		A23767E41D892E0600781E03 /* CLLocation+Sino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Sino.h"; sourceTree = "<group>"; };
+		A23767E51D892E0600781E03 /* CLLocation+Sino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Sino.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		A2149A3F1D88EFD4006CA0B0 /* FairyFishMap */ = {
 			isa = PBXGroup;
 			children = (
+				A23767E41D892E0600781E03 /* CLLocation+Sino.h */,
+				A23767E51D892E0600781E03 /* CLLocation+Sino.m */,
 				A2149A431D88EFD4006CA0B0 /* AppDelegate.h */,
 				A2149A441D88EFD4006CA0B0 /* AppDelegate.m */,
 				A2149A461D88EFD4006CA0B0 /* ViewController.h */,
@@ -110,6 +118,8 @@
 				A2149A4E1D88EFD4006CA0B0 /* LaunchScreen.storyboard */,
 				A2149A511D88EFD4006CA0B0 /* Info.plist */,
 				A2149A401D88EFD4006CA0B0 /* Supporting Files */,
+				A2149A731D88F19F006CA0B0 /* MapViewController.h */,
+				A2149A741D88F19F006CA0B0 /* MapViewController.m */,
 			);
 			path = FairyFishMap;
 			sourceTree = "<group>";
@@ -207,6 +217,7 @@
 				TargetAttributes = {
 					A2149A3C1D88EFD4006CA0B0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = CW255Y9TUD;
 					};
 					A2149A551D88EFD4006CA0B0 = {
 						CreatedOnToolsVersion = 7.3;
@@ -272,7 +283,9 @@
 			files = (
 				A2149A481D88EFD4006CA0B0 /* ViewController.m in Sources */,
 				A2149A451D88EFD4006CA0B0 /* AppDelegate.m in Sources */,
+				A23767E61D892E0600781E03 /* CLLocation+Sino.m in Sources */,
 				A2149A421D88EFD4006CA0B0 /* main.m in Sources */,
+				A2149A751D88F19F006CA0B0 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +428,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FairyFishMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yhl.www.FairyFishMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +443,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FairyFishMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yhl.www.FairyFishMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -498,6 +519,7 @@
 				A2149A6C1D88EFD4006CA0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2149A6D1D88EFD4006CA0B0 /* Build configuration list for PBXNativeTarget "FairyFishMapTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +528,7 @@
 				A2149A6F1D88EFD4006CA0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2149A701D88EFD4006CA0B0 /* Build configuration list for PBXNativeTarget "FairyFishMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +537,7 @@
 				A2149A721D88EFD4006CA0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
